@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: provider-product
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/snail?serverTimezone=GMT%2B8 # 数据库连接地址
+    username: root # 数据库用户名
+    password: root # 数据库连接密码
+
+
+mybatis:
+  mapper-locations: # 所有的mapper映射文件
+  - classpath:mapper/*.xml
+
+logging:
+  level:
+    com.snail: debug
+
+eureka:
+  client: #客户端注册配置
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://admin:123456@127.0.0.1:8761/eureka,http://admin:123456@127.0.0.1:8762/eureka
+  instance:
+    instance-id: provider-product
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 15  # 如果现在超过了5秒的间隔（默认是90秒）
+
+info:
+  app.name: provider-product
+  company.name: snail
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$

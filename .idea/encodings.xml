@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/api-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-fegin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-fegin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-fegin2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-sys" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-product" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-product2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wms-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wms-entity" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wms-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wms-security" charset="UTF-8" />
+  </component>
+</project>

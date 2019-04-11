@@ -1,0 +1,39 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: consumer-fegin
+
+logging:
+  level:
+    com.snail: debug
+
+feign:
+  httpclient:
+    connection-timeout: 3000
+  compression:
+    request:
+      enabled: true
+      mime-types: # 可以被压缩的类型
+      - text/xml
+      - application/xml
+      - application/json
+      min-request-size: 2048 # 超过2048的字节进行压缩
+
+eureka:
+  client: #客户端注册配置
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://admin:123456@127.0.0.1:8761/eureka,http://admin:123456@127.0.0.1:8762/eureka
+
+  instance:
+    instance-id: consumer-fegin
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 15  # 如果现在超过了5秒的间隔（默认是90秒）
+
+info:
+    app.name: consumer-fegin
+    company.name: snail
+    build.artifactId: $project.artifactId$
+    build.modelVersion: $project.modelVersion$
